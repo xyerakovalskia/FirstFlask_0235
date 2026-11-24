@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <title>Sapa Kampus</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<h1>Sapa Kampus</h1>
+
+<form method="post">
+    <label for="nama">Nama panggilan</label>
+    <input id="nama" name="nama" type="text" required>
+        <label for="gender">Jenis kelamin</label>
+    <select id="gender" name="gender" required>
+        <option value="">Pilih jenis kelamin</option>
+        <option value="Laki-laki">Laki-laki</option>
+        <option value="Perempuan">Perempuan</option>
+        <option value="Non-binary">Non-binary</option>
+    </select>
+    <button type="submit">Sapa saya</button>
+</form>
+
+{% if gender == "Laki-laki" %}
+    <p>Halo, {{ nama }} ganteng!</p>
+{% elif gender == "Perempuan" %}
+    <p>Halo, {{ nama }} cantik!</p>
+{% elif gender == "Non-binary" %}
+    <p>Halo, {{ nama }} stay halal!</p>
+{% endif %}
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f7f4;
+    color: #183d36;
+    max-width: 480px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+button {
+    background-color: #20634e;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+form {
+    display: grid;
+    grid-template-columns: max-content minmax(0, 210px);
+    align-items: center;
+    gap: 10px 12px;
+}
+
+form button {
+    grid-column: 2;
+    justify-self: start;
+}
